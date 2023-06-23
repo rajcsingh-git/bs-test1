@@ -1,0 +1,31 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: template1
+  tile: Create namespace
+  description: Template to create namespace 
+spec:
+  owner: raj
+  type: service
+  parameters:
+    - title: Inputs
+      required:
+        - name
+        - groups
+        - server
+      properties:
+        name:
+          title: namespace
+          type: string
+          description: type the new namespace
+        groups:
+          title: Group_name
+          type: string
+          description: Group Name to be used
+        server:
+          title: server 
+          type: string
+          description: Server name 
+          
+
+
