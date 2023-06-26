@@ -49,3 +49,10 @@ spec:
         description: Create new repo 
         repoVisibility: public
         defaultBranch: main
+
+    - id: register
+      name: register
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps['create-new-repo'].output.repoContentsUrl }}
+        catalogInfoPath: '/catalog-info.yaml'
